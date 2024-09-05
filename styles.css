@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,69 +15,7 @@ header {
 
 header h1 {
     margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 20px;
-    background-color: white;
-    margin: 20px 10%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    color: #00796b;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #00796b;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #00796b;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
+    color: red; /* Título Bioma Pampa em vermelho */
 }
 
 nav .navbar {
@@ -95,48 +34,46 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* Efeito quando a opção for clicada */
+nav ul li.active a {
+    border-top: 4px solid #0056b3; /* Barra azul forte em cima */
+    background-color: rgba(0, 86, 179, 0.3); /* Azul fraco com opacidade no fundo */
 }
 
-.icon {
-    display: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-section {
-    padding: 20px;
-    background-color: white;
-    margin: 20px 10%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Centralização dos títulos */
 section h2 {
-    color: #00796b;
+    color: black;
+    text-align: center;
+    transition: color 0.3s;
 }
 
+section.active h2 {
+    color: #0056b3; /* Azul forte quando o título estiver ativo */
+}
+
+/* Estilo para o rodapé */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #00796b;
+    padding: 30px 0;
+    background-color: black;
     color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase; /* Texto em maiúsculas */
 }
 
-/* MEDIA QUERIES */
+/* Estilos para celulares */
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -191,3 +128,4 @@ footer {
         font-size: 1.25rem;
     }
 }
+
